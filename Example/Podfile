@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ASAudioWaveformView_Example' do
+  pod 'ASAudioWaveformView', :path => '../'
+
+  target 'ASAudioWaveformView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
