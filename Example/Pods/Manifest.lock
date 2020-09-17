@@ -1,0 +1,16 @@
+PODS:
+  - ASAudioWaveformView (0.1.0)
+
+DEPENDENCIES:
+  - ASAudioWaveformView (from `../`)
+
+EXTERNAL SOURCES:
+  ASAudioWaveformView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ASAudioWaveformView: b4f652d4c2d6dac0ebe6b56531bd864a925b6146
+
+PODFILE CHECKSUM: fd8796fff79d884ec8e4becd8d7bceef93a73dc0
+
+COCOAPODS: 1.9.3

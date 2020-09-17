@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AE0DA23B66AD63506193F70B0B9BA98 /* Pods-ASAudioWaveformView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 006C348BCA07DDF89C8606BFBBBBE5D1 /* Pods-ASAudioWaveformView_Example-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1A92D22F4C79A508302E7BDBCED3B4E9 /* Pods-ASAudioWaveformView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1866002A6DCC972139EB027DCA73A9 /* Pods-ASAudioWaveformView_Example-dummy.m */; };
+		8334159760A30DD4680777150FFFFFAA /* ASAudioDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1400FBD1255D19C35DF62CC05015F7 /* ASAudioDataReader.swift */; };
+		8DF51C942862E56454B323B77E48AC2E /* ASAudioWaveformDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565ADF87BC1392EE3C62C7AF7EC363E4 /* ASAudioWaveformDataFactory.swift */; };
+		A75B5126B3847880DC217327FA940B89 /* ASAudioWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8678E2F8C869F081F49A0258258C11A /* ASAudioWaveformView-dummy.m */; };
+		B15DA8DAE52C35A5DAB5C0C81185E7F3 /* ASAudioWaveformDataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EB48B0773AC05861B785000B188A2 /* ASAudioWaveformDataFilter.swift */; };
+		BABD4662C6A76D0770EE562CA96E3F70 /* ASThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97A6B72CC75C7EC2906F23D13E32458 /* ASThrottler.swift */; };
+		C7991D7B69FED437BA80989DC2F60674 /* ASAudioWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC03C06DB165765EC4BFA1C38288D8E /* ASAudioWaveformView.swift */; };
+		D18C4ECC5C21861DAC5F3B38125681E0 /* ASAudioWaveformView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF040B3306A8F0DC538C50C5A3E9057 /* ASAudioWaveformView-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B5E2C2B8F5942F5387DA5636071A58D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6541D526F2C0A3A8831FBC602FBD1B25;
+			remoteInfo = ASAudioWaveformView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006C348BCA07DDF89C8606BFBBBBE5D1 /* Pods-ASAudioWaveformView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ASAudioWaveformView_Example-umbrella.h"; sourceTree = "<group>"; };
+		050338CECA572C3B822FF2E9F9E8FB1E /* ASAudioWaveformView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASAudioWaveformView.release.xcconfig; sourceTree = "<group>"; };
+		10F26C627B441A6BE9618289576B183E /* Pods-ASAudioWaveformView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ASAudioWaveformView_Example.modulemap"; sourceTree = "<group>"; };
+		2EC03C06DB165765EC4BFA1C38288D8E /* ASAudioWaveformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioWaveformView.swift; path = ASAudioWaveformView/Classes/ASAudioWaveformView.swift; sourceTree = "<group>"; };
+		364243BE07310AD7917177E9C0FBDC49 /* ASAudioWaveformView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ASAudioWaveformView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		421DBC2F32D35424E012B64094BDD6B3 /* ASAudioWaveformView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASAudioWaveformView.debug.xcconfig; sourceTree = "<group>"; };
+		565ADF87BC1392EE3C62C7AF7EC363E4 /* ASAudioWaveformDataFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioWaveformDataFactory.swift; path = ASAudioWaveformView/Classes/ASAudioWaveformDataFactory.swift; sourceTree = "<group>"; };
+		6A656CC54E896760E9D8E26AFB19AE28 /* Pods-ASAudioWaveformView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASAudioWaveformView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7AC7E6B367C30F6533C26E8A689BD8C6 /* Pods-ASAudioWaveformView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ASAudioWaveformView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		81540CE1E34E2B6FFD06DF172802B6C9 /* Pods-ASAudioWaveformView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ASAudioWaveformView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		822EB48B0773AC05861B785000B188A2 /* ASAudioWaveformDataFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioWaveformDataFilter.swift; path = ASAudioWaveformView/Classes/ASAudioWaveformDataFilter.swift; sourceTree = "<group>"; };
+		8A1866002A6DCC972139EB027DCA73A9 /* Pods-ASAudioWaveformView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ASAudioWaveformView_Example-dummy.m"; sourceTree = "<group>"; };
+		908794322EE619128B1A742E53B4EC6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9D1400FBD1255D19C35DF62CC05015F7 /* ASAudioDataReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioDataReader.swift; path = ASAudioWaveformView/Classes/ASAudioDataReader.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B8678E2F8C869F081F49A0258258C11A /* ASAudioWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ASAudioWaveformView-dummy.m"; sourceTree = "<group>"; };
+		BC7E32FD08F8AB9E0C22E8C2190B740D /* ASAudioWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ASAudioWaveformView.modulemap; sourceTree = "<group>"; };
+		BFF040B3306A8F0DC538C50C5A3E9057 /* ASAudioWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASAudioWaveformView-umbrella.h"; sourceTree = "<group>"; };
+		C17811DCD23E8AC18307E7AC8AE64B98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C902986DE75F02829623A22822B98FAB /* libASAudioWaveformView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libASAudioWaveformView.a; path = libASAudioWaveformView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97A6B72CC75C7EC2906F23D13E32458 /* ASThrottler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASThrottler.swift; path = ASAudioWaveformView/Classes/ASThrottler.swift; sourceTree = "<group>"; };
+		F2480E6444F0EDF2F24F14AE9D7EC721 /* ASAudioWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASAudioWaveformView-prefix.pch"; sourceTree = "<group>"; };
+		F58FDA0BA82A5C3ECD6D5D1EEB25FCCB /* Pods-ASAudioWaveformView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASAudioWaveformView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FA7BDF8B026DEB80091D2108F98F5A13 /* libPods-ASAudioWaveformView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ASAudioWaveformView_Example.a"; path = "libPods-ASAudioWaveformView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		393B30A910437A23A92C2D0D380E3382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		973C31DB433EE0FDC52F1E4FD4492CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10B90B0867B158987F39DD8A9F396EA5 /* ASAudioWaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				9D1400FBD1255D19C35DF62CC05015F7 /* ASAudioDataReader.swift */,
+				565ADF87BC1392EE3C62C7AF7EC363E4 /* ASAudioWaveformDataFactory.swift */,
+				822EB48B0773AC05861B785000B188A2 /* ASAudioWaveformDataFilter.swift */,
+				2EC03C06DB165765EC4BFA1C38288D8E /* ASAudioWaveformView.swift */,
+				D97A6B72CC75C7EC2906F23D13E32458 /* ASThrottler.swift */,
+				60EE7DBACF8199DC7308E9612C9F90B2 /* Pod */,
+				FBCDF02163B324420D014CFE4B62F11D /* Support Files */,
+			);
+			name = ASAudioWaveformView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2B0FA2A7478A5AB6DFEAD426FC781F7B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10B90B0867B158987F39DD8A9F396EA5 /* ASAudioWaveformView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		60EE7DBACF8199DC7308E9612C9F90B2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				364243BE07310AD7917177E9C0FBDC49 /* ASAudioWaveformView.podspec */,
+				C17811DCD23E8AC18307E7AC8AE64B98 /* LICENSE */,
+				908794322EE619128B1A742E53B4EC6A /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		936A6CF744B2DC1CFE93520456EFB468 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FED97141759D6C41AE39D819502E2271 /* Pods-ASAudioWaveformView_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CAC0651B435DC2CE30C55070B37BE72B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C902986DE75F02829623A22822B98FAB /* libASAudioWaveformView.a */,
+				FA7BDF8B026DEB80091D2108F98F5A13 /* libPods-ASAudioWaveformView_Example.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				2B0FA2A7478A5AB6DFEAD426FC781F7B /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				CAC0651B435DC2CE30C55070B37BE72B /* Products */,
+				936A6CF744B2DC1CFE93520456EFB468 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBCDF02163B324420D014CFE4B62F11D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E32FD08F8AB9E0C22E8C2190B740D /* ASAudioWaveformView.modulemap */,
+				B8678E2F8C869F081F49A0258258C11A /* ASAudioWaveformView-dummy.m */,
+				F2480E6444F0EDF2F24F14AE9D7EC721 /* ASAudioWaveformView-prefix.pch */,
+				BFF040B3306A8F0DC538C50C5A3E9057 /* ASAudioWaveformView-umbrella.h */,
+				421DBC2F32D35424E012B64094BDD6B3 /* ASAudioWaveformView.debug.xcconfig */,
+				050338CECA572C3B822FF2E9F9E8FB1E /* ASAudioWaveformView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ASAudioWaveformView";
+			sourceTree = "<group>";
+		};
+		FED97141759D6C41AE39D819502E2271 /* Pods-ASAudioWaveformView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				10F26C627B441A6BE9618289576B183E /* Pods-ASAudioWaveformView_Example.modulemap */,
+				81540CE1E34E2B6FFD06DF172802B6C9 /* Pods-ASAudioWaveformView_Example-acknowledgements.markdown */,
+				7AC7E6B367C30F6533C26E8A689BD8C6 /* Pods-ASAudioWaveformView_Example-acknowledgements.plist */,
+				8A1866002A6DCC972139EB027DCA73A9 /* Pods-ASAudioWaveformView_Example-dummy.m */,
+				006C348BCA07DDF89C8606BFBBBBE5D1 /* Pods-ASAudioWaveformView_Example-umbrella.h */,
+				F58FDA0BA82A5C3ECD6D5D1EEB25FCCB /* Pods-ASAudioWaveformView_Example.debug.xcconfig */,
+				6A656CC54E896760E9D8E26AFB19AE28 /* Pods-ASAudioWaveformView_Example.release.xcconfig */,
+			);
+			name = "Pods-ASAudioWaveformView_Example";
+			path = "Target Support Files/Pods-ASAudioWaveformView_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		58DD59BDE55F9A87D55A50B16C314CF9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AE0DA23B66AD63506193F70B0B9BA98 /* Pods-ASAudioWaveformView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07E2364BE98779437A02050E372CE0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D18C4ECC5C21861DAC5F3B38125681E0 /* ASAudioWaveformView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6541D526F2C0A3A8831FBC602FBD1B25 /* ASAudioWaveformView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2230325E94D63FBCFD77E2E16DA40917 /* Build configuration list for PBXNativeTarget "ASAudioWaveformView" */;
+			buildPhases = (
+				B07E2364BE98779437A02050E372CE0D /* Headers */,
+				6E3BF6A19E84BB28281D57C68812546F /* Sources */,
+				973C31DB433EE0FDC52F1E4FD4492CB1 /* Frameworks */,
+				02FD76E222A392CF8E77EABA651B9C7A /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASAudioWaveformView;
+			productName = ASAudioWaveformView;
+			productReference = C902986DE75F02829623A22822B98FAB /* libASAudioWaveformView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AE4CE341F2A99B41B32381CC68EAE2CE /* Pods-ASAudioWaveformView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0143A390F70B60BC8DCE5F6AD852DACE /* Build configuration list for PBXNativeTarget "Pods-ASAudioWaveformView_Example" */;
+			buildPhases = (
+				58DD59BDE55F9A87D55A50B16C314CF9 /* Headers */,
+				CCC9844D5D84BC60CDA6200DFEADA2FA /* Sources */,
+				393B30A910437A23A92C2D0D380E3382 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13903F6542A286E77D1923F70E5917CE /* PBXTargetDependency */,
+			);
+			name = "Pods-ASAudioWaveformView_Example";
+			productName = "Pods-ASAudioWaveformView_Example";
+			productReference = FA7BDF8B026DEB80091D2108F98F5A13 /* libPods-ASAudioWaveformView_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CAC0651B435DC2CE30C55070B37BE72B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6541D526F2C0A3A8831FBC602FBD1B25 /* ASAudioWaveformView */,
+				AE4CE341F2A99B41B32381CC68EAE2CE /* Pods-ASAudioWaveformView_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02FD76E222A392CF8E77EABA651B9C7A /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/ASAudioWaveformView/ASAudioWaveformView.modulemap",
+				"${PODS_ROOT}/Headers/Public/ASAudioWaveformView/ASAudioWaveformView-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/ASAudioWaveformView-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/ASAudioWaveformView/ASAudioWaveformView.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/ASAudioWaveformView/ASAudioWaveformView-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E3BF6A19E84BB28281D57C68812546F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8334159760A30DD4680777150FFFFFAA /* ASAudioDataReader.swift in Sources */,
+				8DF51C942862E56454B323B77E48AC2E /* ASAudioWaveformDataFactory.swift in Sources */,
+				B15DA8DAE52C35A5DAB5C0C81185E7F3 /* ASAudioWaveformDataFilter.swift in Sources */,
+				A75B5126B3847880DC217327FA940B89 /* ASAudioWaveformView-dummy.m in Sources */,
+				C7991D7B69FED437BA80989DC2F60674 /* ASAudioWaveformView.swift in Sources */,
+				BABD4662C6A76D0770EE562CA96E3F70 /* ASThrottler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC9844D5D84BC60CDA6200DFEADA2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A92D22F4C79A508302E7BDBCED3B4E9 /* Pods-ASAudioWaveformView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13903F6542A286E77D1923F70E5917CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ASAudioWaveformView;
+			target = 6541D526F2C0A3A8831FBC602FBD1B25 /* ASAudioWaveformView */;
+			targetProxy = 4B5E2C2B8F5942F5387DA5636071A58D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01D0778630D5F9B7B66890900627E3A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 050338CECA572C3B822FF2E9F9E8FB1E /* ASAudioWaveformView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ASAudioWaveformView/ASAudioWaveformView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/ASAudioWaveformView/ASAudioWaveformView.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ASAudioWaveformView;
+				PRODUCT_NAME = ASAudioWaveformView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		388CED63E7622EBB99D9CFF5CF94AA48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A656CC54E896760E9D8E26AFB19AE28 /* Pods-ASAudioWaveformView_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ASAudioWaveformView_Example/Pods-ASAudioWaveformView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71202FEC1CCDDB5B55B99BA7CF5B5FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 421DBC2F32D35424E012B64094BDD6B3 /* ASAudioWaveformView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ASAudioWaveformView/ASAudioWaveformView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/ASAudioWaveformView/ASAudioWaveformView.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ASAudioWaveformView;
+				PRODUCT_NAME = ASAudioWaveformView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EB9FD5ABE11D854C239EA110792E81BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F58FDA0BA82A5C3ECD6D5D1EEB25FCCB /* Pods-ASAudioWaveformView_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ASAudioWaveformView_Example/Pods-ASAudioWaveformView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0143A390F70B60BC8DCE5F6AD852DACE /* Build configuration list for PBXNativeTarget "Pods-ASAudioWaveformView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB9FD5ABE11D854C239EA110792E81BC /* Debug */,
+				388CED63E7622EBB99D9CFF5CF94AA48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2230325E94D63FBCFD77E2E16DA40917 /* Build configuration list for PBXNativeTarget "ASAudioWaveformView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71202FEC1CCDDB5B55B99BA7CF5B5FEA /* Debug */,
+				01D0778630D5F9B7B66890900627E3A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

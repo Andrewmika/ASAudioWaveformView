@@ -1,0 +1,6 @@
+module Pods_ASAudioWaveformView_Example {
+  umbrella header "Pods-ASAudioWaveformView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ASAudioWaveformView",
+  "version": "0.1.0",
+  "summary": "A short description of ASAudioWaveformView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Andrew Shen/ASAudioWaveformView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Andrew Shen": "iandrew@126.com"
+  },
+  "source": {
+    "git": "https://github.com/Andrew Shen/ASAudioWaveformView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ASAudioWaveformView/Classes/**/*",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}
