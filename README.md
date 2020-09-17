@@ -1,13 +1,13 @@
 # ASAudioWaveformView
 
-[![CI Status](https://img.shields.io/travis/Andrew Shen/ASAudioWaveformView.svg?style=flat)](https://travis-ci.org/Andrew Shen/ASAudioWaveformView)
 [![Version](https://img.shields.io/cocoapods/v/ASAudioWaveformView.svg?style=flat)](https://cocoapods.org/pods/ASAudioWaveformView)
 [![License](https://img.shields.io/cocoapods/l/ASAudioWaveformView.svg?style=flat)](https://cocoapods.org/pods/ASAudioWaveformView)
 [![Platform](https://img.shields.io/cocoapods/p/ASAudioWaveformView.svg?style=flat)](https://cocoapods.org/pods/ASAudioWaveformView)
 
-![screenshop](./screenshot.png)
+![screenshop](screenshot.png)
 
-![zoom](./zoom1.gif)
+![zoom](zoom1.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
