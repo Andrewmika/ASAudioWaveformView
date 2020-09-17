@@ -4,9 +4,9 @@
 [![License](https://img.shields.io/cocoapods/l/ASAudioWaveformView.svg?style=flat)](https://cocoapods.org/pods/ASAudioWaveformView)
 [![Platform](https://img.shields.io/cocoapods/p/ASAudioWaveformView.svg?style=flat)](https://cocoapods.org/pods/ASAudioWaveformView)
 
-![screenshop](screenshot.png)
+![](screenshot.png)
 
-![zoom](zoom1.gif)
+![](zoom1.gif)
 
 ## Example
 

@@ -25,7 +25,7 @@ easy to create audio waveform view and it will adjust to fit the frame automatic
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Andrew Shen' => 'iandrew@126.com' }
-  s.source           = { :git => 'git@github.com:Andrewmika/ASAudioWaveformView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Andrewmika/ASAudioWaveformView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
