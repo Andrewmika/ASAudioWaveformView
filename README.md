@@ -8,7 +8,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/zoom1.gif)
+![zoom](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/zoom1.gif)
 
 
 ## Requirements
@@ -63,19 +63,19 @@ pod 'ASAudioWaveformView'
 
 1. position type center, content type polyLine
 
-	![](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/center.png)
+	![center](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/center.png)
 
 2. position type top, content type polyLine
 
-	![](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/top.png)
+	![top](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/top.png)
 	
 3. position type bottom, content type polyLine
 
-	![](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/bottom.png)
+	![bottom](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/bottom.png)
 	
 4. position type center, content type singleLine
 
-	![](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/single.png)
+	![single](https://raw.githubusercontent.com/Andrewmika/MyPicBed/master/img/single.png)
 	
 ### reload with different audio URL
 waveform will adjust to fit the frame automatically
