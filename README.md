@@ -4,13 +4,12 @@
 [![License](https://img.shields.io/cocoapods/l/ASAudioWaveformView.svg?style=flat)](https://cocoapods.org/pods/ASAudioWaveformView)
 [![Platform](https://img.shields.io/cocoapods/p/ASAudioWaveformView.svg?style=flat)](https://cocoapods.org/pods/ASAudioWaveformView)
 
-![](screenshot.png)
-
-![](zoom1.gif)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+![](zoom1.gif)
+
 
 ## Requirements
 swift 5.0
@@ -62,6 +61,18 @@ pod 'ASAudioWaveformView'
     public func maxPointsCount(_ count: Int) -> ASAudioWaveformConfig
 ```
 
+1. position type center, content type polyLine
+	![](center.png)
+
+2. position type top, content type polyLine
+	![](top.png)
+	
+3. position type bottom, content type polyLine
+	![](bottom.png)
+	
+4. position type center, content type singleLine
+	![](single.png)
+	
 ### reload with different audio URL
 waveform will adjust to fit the frame automatically
 
