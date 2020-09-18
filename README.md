@@ -8,7 +8,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![](./zoom1.gif)
+![screen](zoom1.gif)
 
 
 ## Requirements
@@ -62,16 +62,20 @@ pod 'ASAudioWaveformView'
 ```
 
 1. position type center, content type polyLine
-	![1](./center.png)
+
+	![1](center.png)
 
 2. position type top, content type polyLine
-	![2](./top.png)
+
+	![2](top.png)
 	
 3. position type bottom, content type polyLine
-	![3](./bottom.png)
+
+	![3](bottom.png)
 	
 4. position type center, content type singleLine
-	![4](./single.png)
+
+	![4](single.png)
 	
 ### reload with different audio URL
 waveform will adjust to fit the frame automatically
