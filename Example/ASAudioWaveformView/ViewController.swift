@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         wave = ASAudioWaveformView.create(frame: CGRect(x: 0, y: 40, width: view.frame.width, height: 100)) { (config) in
             let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
-            config.audioURL(url).maxPointsCount(500).fillColor(.systemTeal)
+            config.audioURL(url).maxSamplesCount(500).fillColor(.systemTeal)
         }
         wave.backgroundColor = .blue
         self.view.addSubview(wave)
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         
         wave3.createWaveform { (config) in
             let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
-            config.audioURL(url).contentType(.singleLine).maxPointsCount(500).fillColor(.red)
+            config.audioURL(url).contentType(.singleLine).maxSamplesCount(300).fillColor(.red)
         }
         
     }

@@ -30,7 +30,7 @@ pod 'ASAudioWaveformView'
     ```swift
     let wave = ASAudioWaveformView.create(frame: CGRect(x: 0, y: 40, width: 200, height: 100)) { (config) in
         let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
-        config.audioURL(url).maxPointsCount(500).fillColor(.systemTeal)
+        config.audioURL(url).maxSamplesCount(500).fillColor(.systemTeal)
     }
     ```
 2. if you use Autolayout or set the frame later
@@ -58,7 +58,7 @@ pod 'ASAudioWaveformView'
     public func audioURL(_ URL: URL?) -> ASAudioWaveformConfig
 
     /// config max samples count, the default is 1000
-    public func maxPointsCount(_ count: Int) -> ASAudioWaveformConfig
+    public func maxSamplesCount(_ count: Int) -> ASAudioWaveformConfig
 ```
 
 1. position type center, content type polyLine

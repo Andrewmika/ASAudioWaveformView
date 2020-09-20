@@ -13,7 +13,7 @@ public class ASAudioWaveformConfig {
     var contentType: ASAudioWaveformView.ContentType = .polyLine
     var fillColor: UIColor = .yellow
     var audioURL: URL?
-    var maxPointsCount: Int = 600
+    var maxSamplesCount: Int = 600
     
     /// config waveform postion, the default is center
     @discardableResult
@@ -45,8 +45,8 @@ public class ASAudioWaveformConfig {
     
     /// config max samples count, the default is 1000
     @discardableResult
-    public func maxPointsCount(_ count: Int) -> ASAudioWaveformConfig {
-        maxPointsCount = count
+    public func maxSamplesCount(_ count: Int) -> ASAudioWaveformConfig {
+        maxSamplesCount = count
         return self
     }
 }
@@ -93,7 +93,7 @@ public class ASAudioWaveformView: UIView {
         guard !frame.size.equalTo(.zero), let URL = waveformConfig.audioURL else {
             return
         }
-        ASAudioWaveformDataFactory.loadAudioWaveformData(from: URL, formateSize: (waveformConfig.maxPointsCount, frame.height * 0.5)) { (samples, assetData) in
+        ASAudioWaveformDataFactory.loadAudioWaveformData(from: URL, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5)) { (samples, assetData) in
             self.filteredSamples = samples
             self.drawWaveform()
         }
@@ -107,7 +107,7 @@ public class ASAudioWaveformView: UIView {
             return
         }
         waveformConfig.audioURL = audioURL
-        ASAudioWaveformDataFactory.loadAudioWaveformData(from: url, formateSize: (waveformConfig.maxPointsCount, frame.height * 0.5)) { (samples, waveData) in
+        ASAudioWaveformDataFactory.loadAudioWaveformData(from: url, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5)) { (samples, waveData) in
             self.filteredSamples = samples
             self.drawWaveform()
         }
