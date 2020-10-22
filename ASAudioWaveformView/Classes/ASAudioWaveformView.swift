@@ -64,11 +64,14 @@ public class ASAudioWaveformView: UIView {
         case singleLine
     }
     
+    public typealias DrawCompletion = (Bool) -> Void
+    
     var waveformConfig = ASAudioWaveformConfig()
     var filteredSamples: [Float]?
     var topPoints: [CGFloat]?
     var bottomPoints: [CGFloat]?
     var throttler = ASThrottler(interval: 0.001)
+    var completion: DrawCompletion?
     
     public private(set) var audioURL: URL?
     lazy var shapeLayer: CAShapeLayer = {
@@ -77,20 +80,26 @@ public class ASAudioWaveformView: UIView {
         return layer
     }()
     
-    /// create waveform by waveform config, see ASAudioWaveformConfig
-    /// - Parameter config: waveform config
-    public static func create(frame: CGRect, _ config: (ASAudioWaveformConfig) -> Void) -> ASAudioWaveformView {
+    /// class method create waveform by waveform config, see ASAudioWaveformConfig
+    /// - Parameter config: A configuration object that specifies certain behaviors, See ASAudioWaveformConfig for more infomation
+    /// - Parameter completion: A block object to be executed when complete. This block takes a single Boolean argument that indicates whether or not the content is empty, it will be true if empty.. This parameter may be NULL.
+    public static func create(frame: CGRect, _ config: (ASAudioWaveformConfig) -> Void, completion: DrawCompletion? = nil) -> ASAudioWaveformView {
         let waveformView = ASAudioWaveformView(frame: frame)
-        waveformView.createWaveform(config)
+        waveformView.createWaveform(config, completion: completion)
         return waveformView
     }
+
     
-    
-    /// create waveform by waveform config, see ASAudioWaveformConfig
-    /// - Parameter config: waveform config
-    public func createWaveform(_ config: (ASAudioWaveformConfig) -> Void) {
+    /// create waveform by waveform config
+    /// - Parameter config: A configuration object that specifies certain behaviors, See ASAudioWaveformConfig for more infomation
+    /// - Parameter completion: A block object to be executed when complete. This block takes a single Boolean argument that indicates whether or not the content is empty, it will be true if empty. This parameter may be NULL.
+    public func createWaveform(_ config: (ASAudioWaveformConfig) -> Void, completion: DrawCompletion? = nil) {
+        self.completion = completion
         config(waveformConfig)
         guard !frame.size.equalTo(.zero), let URL = waveformConfig.audioURL else {
+            if let completion = completion {
+                completion(true)
+            }
             return
         }
         ASAudioWaveformDataFactory.loadAudioWaveformData(from: URL, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5)) { (samples, assetData) in
@@ -104,6 +113,9 @@ public class ASAudioWaveformView: UIView {
     /// Refresh waveform by audio url
     public func refreshWaveform(with audioURL: URL?) {
         guard let url = audioURL, self.audioURL != url else {
+            if let completion = completion {
+                completion(true)
+            }
             return
         }
         waveformConfig.audioURL = audioURL
@@ -130,12 +142,21 @@ public class ASAudioWaveformView: UIView {
 private extension ASAudioWaveformView {
     
     func drawWaveform() {
-        guard let samples = filteredSamples else { return }
+        guard let samples = filteredSamples, !samples.isEmpty else {
+            if let completion = completion {
+                completion(true)
+            }
+            return
+        }
         shapeLayer.frame = bounds
         buildWaveformPoints(samples)
         shapeLayer.path = updateWavePath()?.cgPath
         shapeLayer.fillColor = waveformConfig.fillColor.cgColor
         shapeLayer.strokeColor = waveformConfig.fillColor.cgColor
+        
+        if let completion = completion {
+            completion(false)
+        }
     }
     
     func buildWaveformPoints(_ samples: [Float]) {

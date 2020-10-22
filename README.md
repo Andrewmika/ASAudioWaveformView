@@ -12,7 +12,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 
 ## Requirements
-swift 5.0
+swift 5.0+
 
 ## Installation
 
@@ -25,21 +25,28 @@ pod 'ASAudioWaveformView'
 
 ## Usage
 ### there are two ways to create waveform view, waveform will adjust to fit the frame automatically
-1. init with frame
+
+1. init with frame.
+completion is Optional
 
     ```swift
     let wave = ASAudioWaveformView.create(frame: CGRect(x: 0, y: 40, width: 200, height: 100)) { (config) in
         let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
         config.audioURL(url).maxSamplesCount(500).fillColor(.systemTeal)
+    } completion: { (empty) in
+        print("-->draw Complete ,empty: \(empty)")
     }
     ```
-2. if you use Autolayout or set the frame later
+2. if you use Autolayout or set the frame later.
+    completion is Optional
 
     ```swift
     let wave = ASAudioWaveformView()
     wave.createWaveform { (config) in
             let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
             config.audioURL(url).positionType(.top).fillColor(.green)
+    } completion: { (empty) in
+        print("-->draw Complete ,empty: \(empty)")
     }
     ```
 

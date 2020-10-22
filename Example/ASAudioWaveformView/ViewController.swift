@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         wave3.createWaveform { (config) in
             let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
             config.audioURL(url).contentType(.singleLine).maxSamplesCount(300).fillColor(.red)
+        } completion: { (empty) in
+            print("-->draw Complete ,empty: \(empty)")
         }
         
     }
