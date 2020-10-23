@@ -144,6 +144,7 @@ private extension ASAudioWaveformView {
     func drawWaveform() {
         guard let samples = filteredSamples, !samples.isEmpty else {
             if let completion = completion {
+                shapeLayer.path = nil
                 completion(true)
             }
             return

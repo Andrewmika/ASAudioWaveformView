@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ASAudioWaveformView'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'a simple and easy way to create audio waveform view'
 
 # This description is used to generate tags and improve search results.

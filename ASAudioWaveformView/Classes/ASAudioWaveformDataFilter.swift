@@ -21,8 +21,15 @@ struct ASAudioWaveformDataFilter {
             filteredSamples.append(Float(maxValue))
             maxSample = max(maxSample, maxValue)
         }
-        let scaleFactor = (size.height / 2) / CGFloat(maxSample)
-        filteredSamples = filteredSamples.map { $0 * Float(scaleFactor) }
+        if maxSample != 0 {
+            let scaleFactor = (size.height / 2) / CGFloat(maxSample)
+            filteredSamples = filteredSamples.map { $0 * Float(scaleFactor) }
+        }
+        else {
+            return nil;
+        }
+        
+        
         return filteredSamples
     }
 }
