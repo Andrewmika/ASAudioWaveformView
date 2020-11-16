@@ -18,9 +18,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        wave = ASAudioWaveformView.create(frame: CGRect(x: 0, y: 40, width: view.frame.width, height: 100)) { (config) in
+        wave = ASAudioWaveformView.create(frame: .zero) { (config) in
             let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
             config.audioURL(url).maxSamplesCount(500).fillColor(.systemTeal)
+        } completion: { (empty) in
+            print("-->11draw Complete ,empty: \(empty)")
         }
         wave.backgroundColor = .blue
         self.view.addSubview(wave)
@@ -41,7 +43,6 @@ class ViewController: UIViewController {
         } completion: { (empty) in
             print("-->draw Complete ,empty: \(empty)")
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +63,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func zoom(_ sender: Any) {
-        wave.frame = CGRect(x: wave.frame.origin.x - 25, y: 40, width: wave.frame.width + 50, height: 100)
+        if wave.frame.equalTo(.zero) {
+            wave.frame = CGRect(x: 20, y: 40, width: 300, height: 100)
+        }
+        else {
+            wave.frame = CGRect(x: wave.frame.origin.x - 25, y: 40, width: wave.frame.width + 50, height: 100)
+        }
         stackWidth.constant = wave.frame.width + 50
     }
     

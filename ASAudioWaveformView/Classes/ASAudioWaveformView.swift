@@ -7,50 +7,6 @@
 
 import UIKit
 
-
-public class ASAudioWaveformConfig {
-    var positionType: ASAudioWaveformView.PositionType = .center
-    var contentType: ASAudioWaveformView.ContentType = .polyLine
-    var fillColor: UIColor = .yellow
-    var audioURL: URL?
-    var maxSamplesCount: Int = 600
-    
-    /// config waveform postion, the default is center
-    @discardableResult
-    public func positionType(_ type: ASAudioWaveformView.PositionType) -> ASAudioWaveformConfig {
-        positionType = type
-        return self
-    }
-    
-    /// config waveform content style, the default is polyline
-    @discardableResult
-    public func contentType(_ type: ASAudioWaveformView.ContentType) -> ASAudioWaveformConfig {
-        contentType = type
-        return self
-    }
-    
-    /// config waveform fill color, the default is yellow
-    @discardableResult
-    public func fillColor(_ color: UIColor) -> ASAudioWaveformConfig {
-        fillColor = color
-        return self
-    }
-    
-    /// config waveform audio source
-    @discardableResult
-    public func audioURL(_ URL: URL?) -> ASAudioWaveformConfig {
-        audioURL = URL
-        return self
-    }
-    
-    /// config max samples count, the default is 1000
-    @discardableResult
-    public func maxSamplesCount(_ count: Int) -> ASAudioWaveformConfig {
-        maxSamplesCount = count
-        return self
-    }
-}
-
 public class ASAudioWaveformView: UIView {
     
     public enum PositionType {
@@ -66,14 +22,20 @@ public class ASAudioWaveformView: UIView {
     
     public typealias DrawCompletion = (Bool) -> Void
     
+    public var audioURL: URL? {
+        return waveformConfig.audioURL
+    }
+    
+    typealias LoadState = (loaded: Bool, loading: Bool)
+
     var waveformConfig = ASAudioWaveformConfig()
     var filteredSamples: [Float]?
     var topPoints: [CGFloat]?
     var bottomPoints: [CGFloat]?
     var throttler = ASThrottler(interval: 0.001)
     var completion: DrawCompletion?
+    var loadState: LoadState = (false, false)
     
-    public private(set) var audioURL: URL?
     lazy var shapeLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         self.layer.addSublayer(layer)
@@ -96,17 +58,14 @@ public class ASAudioWaveformView: UIView {
     public func createWaveform(_ config: (ASAudioWaveformConfig) -> Void, completion: DrawCompletion? = nil) {
         self.completion = completion
         config(waveformConfig)
-        guard !frame.size.equalTo(.zero), let URL = waveformConfig.audioURL else {
+        guard frame.size.height > 0, let URL = waveformConfig.audioURL else {
             if let completion = completion {
                 completion(true)
             }
             return
         }
-        ASAudioWaveformDataFactory.loadAudioWaveformData(from: URL, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5)) { (samples, assetData) in
-            self.filteredSamples = samples
-            self.drawWaveform()
-        }
         
+        loadWaveformData(from: URL)
     }
     
     
@@ -119,10 +78,7 @@ public class ASAudioWaveformView: UIView {
             return
         }
         waveformConfig.audioURL = audioURL
-        ASAudioWaveformDataFactory.loadAudioWaveformData(from: url, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5)) { (samples, waveData) in
-            self.filteredSamples = samples
-            self.drawWaveform()
-        }
+        loadWaveformData(from: url)
     }
     
     public override func layoutSubviews() {
@@ -134,12 +90,25 @@ public class ASAudioWaveformView: UIView {
             self.shapeLayer.path = self.updateWavePath()?.cgPath
             self.shapeLayer.frame = self.bounds
             CATransaction.commit()
+            
+            if !self.frame.equalTo(.zero), self.loadState == (false, false), let URL = self.waveformConfig.audioURL {
+                self.loadWaveformData(from: URL)
+            }
         }
     }
     
 }
 
 private extension ASAudioWaveformView {
+    
+    func loadWaveformData(from audioURL: URL) {
+        loadState.loading = true
+        ASAudioWaveformDataFactory.loadAudioWaveformData(from: audioURL, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5)) { (samples, assetData) in
+            self.loadState = (true, false)
+            self.filteredSamples = samples
+            self.drawWaveform()
+        }
+    }
     
     func drawWaveform() {
         guard let samples = filteredSamples, !samples.isEmpty else {

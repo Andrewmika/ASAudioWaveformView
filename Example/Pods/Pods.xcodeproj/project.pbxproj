@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AE0DA23B66AD63506193F70B0B9BA98 /* Pods-ASAudioWaveformView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 006C348BCA07DDF89C8606BFBBBBE5D1 /* Pods-ASAudioWaveformView_Example-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1A92D22F4C79A508302E7BDBCED3B4E9 /* Pods-ASAudioWaveformView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1866002A6DCC972139EB027DCA73A9 /* Pods-ASAudioWaveformView_Example-dummy.m */; };
+		64B51B5B2562A302002E8DEF /* ASAudioWaveformConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B51B5A2562A301002E8DEF /* ASAudioWaveformConfig.swift */; };
 		8334159760A30DD4680777150FFFFFAA /* ASAudioDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1400FBD1255D19C35DF62CC05015F7 /* ASAudioDataReader.swift */; };
 		8DF51C942862E56454B323B77E48AC2E /* ASAudioWaveformDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565ADF87BC1392EE3C62C7AF7EC363E4 /* ASAudioWaveformDataFactory.swift */; };
 		A75B5126B3847880DC217327FA940B89 /* ASAudioWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8678E2F8C869F081F49A0258258C11A /* ASAudioWaveformView-dummy.m */; };
@@ -33,26 +34,27 @@
 		050338CECA572C3B822FF2E9F9E8FB1E /* ASAudioWaveformView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASAudioWaveformView.release.xcconfig; sourceTree = "<group>"; };
 		10F26C627B441A6BE9618289576B183E /* Pods-ASAudioWaveformView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ASAudioWaveformView_Example.modulemap"; sourceTree = "<group>"; };
 		2EC03C06DB165765EC4BFA1C38288D8E /* ASAudioWaveformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioWaveformView.swift; path = ASAudioWaveformView/Classes/ASAudioWaveformView.swift; sourceTree = "<group>"; };
-		364243BE07310AD7917177E9C0FBDC49 /* ASAudioWaveformView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ASAudioWaveformView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		364243BE07310AD7917177E9C0FBDC49 /* ASAudioWaveformView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ASAudioWaveformView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		421DBC2F32D35424E012B64094BDD6B3 /* ASAudioWaveformView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASAudioWaveformView.debug.xcconfig; sourceTree = "<group>"; };
 		565ADF87BC1392EE3C62C7AF7EC363E4 /* ASAudioWaveformDataFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioWaveformDataFactory.swift; path = ASAudioWaveformView/Classes/ASAudioWaveformDataFactory.swift; sourceTree = "<group>"; };
+		64B51B5A2562A301002E8DEF /* ASAudioWaveformConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASAudioWaveformConfig.swift; path = ASAudioWaveformView/Classes/ASAudioWaveformConfig.swift; sourceTree = "<group>"; };
 		6A656CC54E896760E9D8E26AFB19AE28 /* Pods-ASAudioWaveformView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASAudioWaveformView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7AC7E6B367C30F6533C26E8A689BD8C6 /* Pods-ASAudioWaveformView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ASAudioWaveformView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		81540CE1E34E2B6FFD06DF172802B6C9 /* Pods-ASAudioWaveformView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ASAudioWaveformView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		822EB48B0773AC05861B785000B188A2 /* ASAudioWaveformDataFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioWaveformDataFilter.swift; path = ASAudioWaveformView/Classes/ASAudioWaveformDataFilter.swift; sourceTree = "<group>"; };
 		8A1866002A6DCC972139EB027DCA73A9 /* Pods-ASAudioWaveformView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ASAudioWaveformView_Example-dummy.m"; sourceTree = "<group>"; };
-		908794322EE619128B1A742E53B4EC6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		908794322EE619128B1A742E53B4EC6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9D1400FBD1255D19C35DF62CC05015F7 /* ASAudioDataReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASAudioDataReader.swift; path = ASAudioWaveformView/Classes/ASAudioDataReader.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B8678E2F8C869F081F49A0258258C11A /* ASAudioWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ASAudioWaveformView-dummy.m"; sourceTree = "<group>"; };
 		BC7E32FD08F8AB9E0C22E8C2190B740D /* ASAudioWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ASAudioWaveformView.modulemap; sourceTree = "<group>"; };
 		BFF040B3306A8F0DC538C50C5A3E9057 /* ASAudioWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASAudioWaveformView-umbrella.h"; sourceTree = "<group>"; };
-		C17811DCD23E8AC18307E7AC8AE64B98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		C902986DE75F02829623A22822B98FAB /* libASAudioWaveformView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libASAudioWaveformView.a; path = libASAudioWaveformView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17811DCD23E8AC18307E7AC8AE64B98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C902986DE75F02829623A22822B98FAB /* libASAudioWaveformView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libASAudioWaveformView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97A6B72CC75C7EC2906F23D13E32458 /* ASThrottler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASThrottler.swift; path = ASAudioWaveformView/Classes/ASThrottler.swift; sourceTree = "<group>"; };
 		F2480E6444F0EDF2F24F14AE9D7EC721 /* ASAudioWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASAudioWaveformView-prefix.pch"; sourceTree = "<group>"; };
 		F58FDA0BA82A5C3ECD6D5D1EEB25FCCB /* Pods-ASAudioWaveformView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASAudioWaveformView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FA7BDF8B026DEB80091D2108F98F5A13 /* libPods-ASAudioWaveformView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ASAudioWaveformView_Example.a"; path = "libPods-ASAudioWaveformView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7BDF8B026DEB80091D2108F98F5A13 /* libPods-ASAudioWaveformView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASAudioWaveformView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				822EB48B0773AC05861B785000B188A2 /* ASAudioWaveformDataFilter.swift */,
 				2EC03C06DB165765EC4BFA1C38288D8E /* ASAudioWaveformView.swift */,
 				D97A6B72CC75C7EC2906F23D13E32458 /* ASThrottler.swift */,
+				64B51B5A2562A301002E8DEF /* ASAudioWaveformConfig.swift */,
 				60EE7DBACF8199DC7308E9612C9F90B2 /* Pod */,
 				FBCDF02163B324420D014CFE4B62F11D /* Support Files */,
 			);
@@ -292,6 +295,7 @@
 				8DF51C942862E56454B323B77E48AC2E /* ASAudioWaveformDataFactory.swift in Sources */,
 				B15DA8DAE52C35A5DAB5C0C81185E7F3 /* ASAudioWaveformDataFilter.swift in Sources */,
 				A75B5126B3847880DC217327FA940B89 /* ASAudioWaveformView-dummy.m in Sources */,
+				64B51B5B2562A302002E8DEF /* ASAudioWaveformConfig.swift in Sources */,
 				C7991D7B69FED437BA80989DC2F60674 /* ASAudioWaveformView.swift in Sources */,
 				BABD4662C6A76D0770EE562CA96E3F70 /* ASThrottler.swift in Sources */,
 			);
@@ -444,8 +448,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
