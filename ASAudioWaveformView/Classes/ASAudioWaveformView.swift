@@ -103,7 +103,7 @@ private extension ASAudioWaveformView {
     
     func loadWaveformData(from audioURL: URL) {
         loadState.loading = true
-        ASAudioWaveformDataFactory.loadAudioWaveformData(from: audioURL, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5)) { (samples, assetData) in
+        ASAudioWaveformDataFactory.loadAudioWaveformData(from: audioURL, formateSize: (waveformConfig.maxSamplesCount, frame.height * 0.5), timeRange: waveformConfig.timeRange) { (samples, assetData) in
             self.loadState = (true, false)
             self.filteredSamples = samples
             self.drawWaveform()

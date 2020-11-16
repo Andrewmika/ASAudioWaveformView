@@ -8,6 +8,7 @@
 
 import UIKit
 import ASAudioWaveformView
+import CoreMedia
 
 class ViewController: UIViewController {
     var wave: ASAudioWaveformView!
@@ -34,7 +35,8 @@ class ViewController: UIViewController {
         
         wave2.createWaveform { (config) in
             let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
-            config.audioURL(url).positionType(.bottom).fillColor(.yellow)
+            let range = CMTimeRangeMake(start: CMTime(value: 1000, timescale: 10), duration: CMTime(value: 1000, timescale: 1))
+            config.audioURL(url).positionType(.bottom).fillColor(.yellow).timeRange(range)
         }
         
         wave3.createWaveform { (config) in

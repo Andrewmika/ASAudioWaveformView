@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreMedia
 
 public class ASAudioWaveformConfig {
     var positionType: ASAudioWaveformView.PositionType = .center
@@ -13,6 +14,7 @@ public class ASAudioWaveformConfig {
     var fillColor: UIColor = .yellow
     var audioURL: URL?
     var maxSamplesCount: Int = 600
+    var timeRange: CMTimeRange = CMTimeRangeMake(start: .zero, duration: .positiveInfinity)
     
     /// config waveform postion, the default is center
     @discardableResult
@@ -46,6 +48,13 @@ public class ASAudioWaveformConfig {
     @discardableResult
     public func maxSamplesCount(_ count: Int) -> ASAudioWaveformConfig {
         maxSamplesCount = count
+        return self
+    }
+    
+    /// Specifies a range of time that may limit the temporal portion of the receiver's asset from which media data will be read.The default value of timeRange is CMTimeRangeMake(kCMTimeZero, kCMTimePositiveInfinity).
+    @discardableResult
+    public func timeRange(_ range: CMTimeRange) -> ASAudioWaveformConfig {
+        timeRange = range
         return self
     }
 }

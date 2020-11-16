@@ -1,5 +1,5 @@
 PODS:
-  - ASAudioWaveformView (0.1.0)
+  - ASAudioWaveformView (1.0.3)
 
 DEPENDENCIES:
   - ASAudioWaveformView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ASAudioWaveformView: b4f652d4c2d6dac0ebe6b56531bd864a925b6146
+  ASAudioWaveformView: fca2f678aee37ef6f7df582dfcf1ef6ce25e9af2
 
 PODFILE CHECKSUM: fd8796fff79d884ec8e4becd8d7bceef93a73dc0
 

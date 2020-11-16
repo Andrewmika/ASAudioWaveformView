@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import CoreMedia
 
 typealias WaveSize = (width: Int, height: CGFloat)
 
 struct ASAudioWaveformDataFactory {
     
-    static func loadAudioWaveformData(from audioURL: URL, formateSize: WaveSize, completion: @escaping ([Float]?, Data?) -> Void) {
-        ASAudioDataReader.loadAudioData(from: audioURL) { (audioData) in
+    static func loadAudioWaveformData(from audioURL: URL, formateSize: WaveSize, timeRange: CMTimeRange, completion: @escaping ([Float]?, Data?) -> Void) {
+        ASAudioDataReader.loadAudioData(from: audioURL, timeRange: timeRange) { (audioData) in
             if let data = audioData {
                 let filteredPoints = ASAudioWaveformDataFilter.filtered(samples: data, for: formateSize)
                 DispatchQueue.main.async {

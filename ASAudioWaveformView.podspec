@@ -37,6 +37,6 @@ easy to create audio waveform view and it will adjust to fit the frame automatic
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'CoreMedia'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

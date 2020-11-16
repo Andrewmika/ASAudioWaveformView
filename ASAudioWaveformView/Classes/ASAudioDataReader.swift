@@ -10,7 +10,7 @@ import AVFoundation
 
 struct ASAudioDataReader {
     
-    static func loadAudioData(from audioURL: URL, completion: @escaping (Data?) -> Void) {
+    static func loadAudioData(from audioURL: URL, timeRange: CMTimeRange, completion: @escaping (Data?) -> Void) {
         let trackKey = "tracks"
         let asset = AVAsset(url: audioURL)
         asset.loadValuesAsynchronously(forKeys: [trackKey]) {
@@ -18,15 +18,16 @@ struct ASAudioDataReader {
             let status = asset.statusOfValue(forKey: trackKey, error: &error)
             var waveData: Data?
             if status == .loaded {
-                waveData = loadAudioData(from: asset)
+                waveData = loadAudioData(from: asset, timeRange: timeRange)
             }
             completion(waveData)
         }
     }
     
-    private static func loadAudioData(from asset: AVAsset) -> Data? {
+    private static func loadAudioData(from asset: AVAsset, timeRange: CMTimeRange) -> Data? {
         do {
             let assetReader = try AVAssetReader.init(asset: asset)
+            assetReader.timeRange = timeRange
             guard let track = asset.tracks(withMediaType: .audio).first else { return nil }
             let outputSettings: [String : Any] = [
                 AVFormatIDKey: kAudioFormatLinearPCM,
