@@ -66,6 +66,9 @@ completion is Optional
 
     /// config max samples count, the default is 1000
     public func maxSamplesCount(_ count: Int) -> ASAudioWaveformConfig
+    
+    /// Specifies a range of time that may limit the temporal portion of the receiver's asset from which media data will be read.The default value of timeRange is CMTimeRangeMake(kCMTimeZero, kCMTimePositiveInfinity).
+    public func timeRange(_ range: CMTimeRange) -> ASAudioWaveformConfig
 ```
 
 1. position type center, content type polyLine
